@@ -44,3 +44,4 @@ def generate_strong_password(amount: int, n: bool, s:bool):
     
     return ''.join(map(str, draw))
 
+print(generate_strong_password(5, True, True))

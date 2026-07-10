@@ -6,6 +6,7 @@ def generate_password(amout: int):
     lowercase_letters = list(ascii_lowercase)
     shuffle(lowercase_letters)
     draw=lowercase_letters[0:amout]
-    return ''.join(draw)
+    return ' '.join(draw)
 
 
+print(generate_password(5))
