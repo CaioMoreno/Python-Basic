@@ -8,3 +8,12 @@ class CourseAttempt:
         return f"{self.student_name}, grade for the course {self.course_name} {self.grade}"
 
 # Write your solution here
+def names_of_students(attempts: list):
+    students = map(lambda s: s.student_name, attempts)
+    return students
+
+def course_names(attempts: list):
+    courses = map(lambda c: c.course_name, attempts)
+
+    return sorted(set(courses))
+

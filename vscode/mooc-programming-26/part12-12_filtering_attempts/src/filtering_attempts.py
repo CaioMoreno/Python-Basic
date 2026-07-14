@@ -7,4 +7,14 @@ class CourseAttempt:
     def __str__(self):
         return f"{self.student_name}, grade for the course {self.course_name} {self.grade}"
 
+def accepted(attempts: list):
+    return filter(lambda course : course.grade >= 1, attempts)
+
+def attempts_with_grade(attempts: list, grade: int):
+    return filter(lambda course: course.grade == grade, attempts)
+
+def passed_students(attempts: list, course: str):
+    students = filter(lambda student: student.grade > 0,  attempts)
+    p_students = filter(lambda passed: passed.course_name == course, students)
+    return sorted(map(lambda p: p.student_name, p_students))
 
