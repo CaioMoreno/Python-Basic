@@ -12,3 +12,15 @@ class BallPlayer:
 
 
 # Write your solution here
+def most_goals(players: list):
+    player = max(players, key=lambda p: p.goals)
+    return player.name
+
+def most_points(players: list):
+    player = max(players, key=lambda p: p.goals+p.passes)
+    return (player.name, player.number)
+
+def least_minutes(players: list):
+    player = min(players, key=lambda p: p.minutes)
+    return player
+
