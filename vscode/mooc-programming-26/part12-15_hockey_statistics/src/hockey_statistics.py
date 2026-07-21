@@ -31,18 +31,6 @@ class HockeyPlayers:
         for i in range(qtt):
             top_players.append(player[i])
 
-        """for i in range(len(top_players)):
-            min_points = -1
-            min_goals = -1
-            for p in top_players:
-                if p["goals"]+p["assists"] == min_points:
-                    if p["goals"] > min_goals:
-                        a = top_players[i-1]
-                        top_players[i-1] = top_players[i]
-                        top_players[i] = a
-                    min_goals = p["goals"]
-                min_points = p["goals"]+p["assists"]"""
-
         return top_players
         
     def most_goals(self, qtt: int):
