@@ -9,7 +9,7 @@ class CourseAttempt:
     def __str__(self):
         return f"{self.course_name} ({self.credits} cr) grade {self.grade}"
 
-# Write your solution
+
 def sum_of_all_credits(courses: list):
     return reduce(lambda total_credits, course: total_credits + course.credits, courses, 0)
 
